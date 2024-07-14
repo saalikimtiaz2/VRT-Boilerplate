@@ -1,10 +1,11 @@
-import { lazy, Suspense } from 'react'
+import { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+const About = lazy(() => import('pages/About'))
+const Home = lazy(() => import('pages/Home'))
+
 // import PrivateRouter from 'routers/middleware/PrivateRouter'
 // import PublicRoute from 'routers/middleware/PublicRouter'
-
-const Home = lazy(() => import('pages/Home'))
-const About = lazy(() => import('pages/About'))
 
 function Routers() {
     return (
